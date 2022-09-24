@@ -1,0 +1,402 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 18px;
+}
+
+.attribution {
+    margin-top: 50px;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.img_section {
+    position: relative;
+}
+
+.card_front {
+    position: absolute;
+    top: 70px;
+    left: 150px;
+}
+
+.card_back {
+    position: absolute;
+    top: 360px;
+    left: 200px;
+}
+
+.typo {
+    position: relative;
+}
+
+.white_circle {
+    position: absolute;
+    top: 0;
+    left: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: -220px;
+    background-color: #f7f7f7;
+}
+
+.outline_circle {
+    position: absolute;
+    top: 12px;
+    left: 100px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-top: -220px;
+    background-color: transparent;
+    border: 2px solid #f7f7f7;
+}
+
+.card_number {
+    position: absolute;
+    top: 50%;
+    font-size: 20px;
+    bottom: 100px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #f7f7f7;
+    margin-top: -80px;
+}
+
+.card_exp {
+    position: absolute;
+    top: 10px;
+    font-size: 20px;
+    bottom: 100px;
+    left: 80%;
+    color: #f7f7f7;
+    margin-top: -70px;
+}
+
+.card_owner {
+    position: absolute;
+    top: 10px;
+    font-size: 20px;
+    bottom: 100px;
+    left: 10%;
+    color: #f7f7f7;
+    margin-top: -70px;
+}
+
+.card_cvc {
+    position: absolute;
+    top: 10px;
+    font-size: 20px;
+    bottom: 100px;
+    left: 80%;
+    color: #f7f7f7;
+    margin-top: -150px;
+}
+
+.form_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.form_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form_card {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form_card input {
+    display: block;
+    border-radius: 5px;
+    border: 2px solid hsl(270, 3%, 87%);
+    width: 100%;
+    padding: 10px 15px;
+}
+
+.form_card input:focus {
+    outline: none;
+    border: 2px solid;
+    border-image-slice: 1;
+    border-width: 2px;
+    border-image-source: linear-gradient(to right, #6448fe, #600594);
+}
+
+.form_card label {
+    margin-bottom: 20px;
+    color: hsl(278, 68%, 11%);
+}
+
+.date {
+    display: flex;
+    gap: 10px;
+}
+
+.exp {
+    width: 50%;
+}
+
+.exp_date {
+    display: flex;
+    gap: 5px;
+    width: 100%;
+}
+
+.btn-con,
+.btn-complet {
+    font-family: inherit;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    color: hsl(0, 0%, 100%);
+    border-radius: 5px;
+    background-color: hsl(278, 68%, 11%);
+}
+
+.erreur {
+    color: hsl(0, 100%, 66%);
+}
+
+.circle_purple {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: hsl(278, 68%, 11%);
+}
+
+.ph-check {
+    color: hsl(0, 0%, 100%);
+    font-size: 30px;
+}
+
+.complet_state {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 375px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+    }
+    .img_section {
+        height: 10%;
+    }
+    .main_img {
+        width: 100%;
+        height: 200px;
+    }
+    .card_fro {
+        width: 80%;
+    }
+    .card_ba {
+        width: 90%;
+    }
+    .card_front {
+        z-index: 10;
+        position: absolute;
+        top: 100px;
+        left: 10px;
+    }
+    .card_back {
+        position: absolute;
+        top: 10px;
+        left: 80px;
+    }
+    .typo {
+        position: relative;
+    }
+    .white_circle {
+        position: absolute;
+        top: 80px;
+        left: 30px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #f7f7f7;
+    }
+    .outline_circle {
+        position: absolute;
+        top: 90px;
+        left: 80px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: transparent;
+        border: 2px solid #f7f7f7;
+    }
+    .card_number {
+        position: absolute;
+        display: inline;
+        top: 50px;
+        font-size: 14px;
+        bottom: 100px;
+        left: 40%;
+        color: #f7f7f7;
+    }
+    .card_exp {
+        position: absolute;
+        top: 30px;
+        font-size: 14px;
+        bottom: 100px;
+        left: 60%;
+        color: #f7f7f7;
+        margin-top: -70px;
+    }
+    .card_owner {
+        position: absolute;
+        top: 30px;
+        font-size: 14px;
+        bottom: 100px;
+        left: 10%;
+        color: #f7f7f7;
+    }
+    .card_cvc {
+        position: absolute;
+        top: 60px;
+        font-size: 14px;
+        bottom: 100px;
+        left: 70%;
+        color: #f7f7f7;
+    }
+    .form_section {
+        margin-top: 30px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 1;
+    }
+    .form_box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .form_card {
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .form_card input {
+        display: block;
+        border-radius: 5px;
+        border: 2px solid hsl(270, 3%, 87%);
+        outline-color: #719ece;
+        width: 100%;
+        padding: 10px 15px;
+    }
+    .form_card input:focus {
+        outline: none;
+        border: 2px solid;
+        border-image-slice: 1;
+        border-width: 2px;
+        border-image-source: linear-gradient(to right, #6448fe, #600594);
+    }
+    .form_card label {
+        margin-bottom: 20px;
+        font-size: 14px;
+        color: hsl(278, 68%, 11%);
+    }
+    .date {
+        display: flex;
+        gap: 10px;
+    }
+    .exp {
+        width: 60%;
+    }
+    .exp p {
+        font-size: 14px;
+    }
+    .cvc p {
+        font-size: 14px;
+    }
+    .exp_date {
+        display: flex;
+        gap: 5px;
+        width: 100%;
+    }
+    .btn-con,
+    .btn-complet {
+        font-family: inherit;
+        width: 100%;
+        padding: 10px;
+        border: none;
+        color: hsl(0, 0%, 100%);
+        border-radius: 5px;
+        background-color: hsl(278, 68%, 11%);
+    }
+    .erreur {
+        color: hsl(0, 100%, 66%);
+    }
+    .circle_purple {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background-color: hsl(278, 68%, 11%);
+    }
+    .ph-check {
+        color: hsl(0, 0%, 100%);
+        font-size: 30px;
+    }
+    .complet_state {
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+    .hidden {
+        display: none;
+    }
+}
+
+@media (max-width: 1190px) {
+    body {
+        display: flex;
+        height: 100vh;
+        gap: 100px;
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 18px;
+    }
+    .form_box {
+        font-size: 14px;
+    }
+}
